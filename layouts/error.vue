@@ -21,8 +21,8 @@
 <script>
 export default {
   name: 'NotFound',
-  metaInfo: {
-    title: 'Not Found',
+  head(){
+    return {title: 'Not Found'}
   },
   props: ['error'],
   layout: 'error'
