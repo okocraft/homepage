@@ -1,62 +1,65 @@
 <template>
   <div>
-    <Nuxt />
+    <main id=main-contents>
+      <transition name="fade" mode="out-in">
+        <Nuxt />
+      </transition>
+    </main>
   </div>
 </template>
 
-<style>
+<style lang='scss'>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Ubuntu:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: #448aca 1px solid;
+}
+
+input:focus {
+  outline-offset: unset;
+}
+
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+  height: 100%;
+  font-size: 14px;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+body {
   margin: 0;
+  height: 100%;
+  display: flex;
+  overflow-x: hidden;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+code, pre {
+  font-family: Consolas;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+#__nuxt {
+  height: 100%;
+  width: 100%;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+#app {
+  color: $app-color;
+  background-color: $app-background;
+  line-height: 1.5;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-flow: column;
+  font-family: 'Noto Sans JP', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+#main-contents {
+  margin-bottom: 3em;
+  width: 100%;
 }
 </style>
