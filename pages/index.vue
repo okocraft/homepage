@@ -1,26 +1,14 @@
 <template>
   <div class="container">
-    <div>
-      <h1 class="title">
-        okocraft-web
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+    <div id="home">
+      <div class=head>
+        <img alt="Okocraft image" src='@/assets/home_image.jpg'>
+      </div>
+
+      <div class=content>
+        <h1>Okocraft</h1>
+
+        <p>A Minecraft Server.</p>
       </div>
     </div>
   </div>
@@ -32,43 +20,47 @@ import Vue from 'vue'
 export default Vue.extend({})
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<style scoped lang='scss'>
+#home {
+  .head {
+    position: relative;
+    display: flex;
+    z-index: 1;
 
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+    >img {
+      height: 100%;
+      width: 100%;
+    }
+  }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+  .content {
+    text-align: center;
 
-.links {
-  padding-top: 15px;
+    >h1 {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 3.2rem;
+      letter-spacing: 0.05rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    >h2 {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 2.2rem;
+      letter-spacing: 0.05rem;
+      margin: 1rem;
+    }
+
+    >p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+
+      >a {
+        color: $link-color;
+        text-decoration: none;
+      }
+    }
+  }
 }
 </style>
