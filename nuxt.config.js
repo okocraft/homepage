@@ -41,6 +41,12 @@ export default {
     '@nuxt/content',
   ],
 
+  styleResources: {
+    scss: [
+      '@/assets/scss/_index.scss'
+    ]
+  },
+
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 
