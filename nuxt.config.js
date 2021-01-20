@@ -159,6 +159,8 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/style-resources',
+    '@nuxtjs/sitemap'
   ],
 
   styleResources: {
@@ -172,6 +174,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  generate: {
+    fallback: true
   },
 
   sitemap: {
