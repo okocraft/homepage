@@ -4,6 +4,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {  
   faExclamationCircle,
+  faBars,
   faBook,
 } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -14,6 +15,7 @@ import {
 
 library.add(
   faExclamationCircle,
+  faBars,
   faBook,
   faGithub,
   faDiscord,
