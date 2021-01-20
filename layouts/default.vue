@@ -1,10 +1,18 @@
 <template>
   <div>
+    <header>
+      <Header />
+    </header>
+
     <main id=main-contents>
       <transition name="fade" mode="out-in">
         <Nuxt />
       </transition>
     </main>
+
+    <footer>
+      <Footer />
+    </footer>
   </div>
 </template>
 
