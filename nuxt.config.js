@@ -160,6 +160,7 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/style-resources',
+    '@nuxtjs/markdownit',
     '@nuxtjs/sitemap'
   ],
 
