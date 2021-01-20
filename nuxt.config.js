@@ -172,5 +172,12 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://siroshun09.github.io',
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
   }
 }
