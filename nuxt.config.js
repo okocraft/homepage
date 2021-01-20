@@ -180,6 +180,23 @@ export default {
     fallback: true
   },
 
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    use: [
+      [
+        require('markdown-it-anchor'), {
+          permalink: true,
+          permalinkSymbol: '🔗',
+          slugify: (s) => String(s).trim().toLowerCase().replace(/\s+/g, '-').replace(/([^\w\-]+)/g, ''),
+        }
+      ],
+      require('markdown-it-emoji'),
+      require('markdown-it-highlightjs')
+    ]
+  },
+
   sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://siroshun09.github.io',
