@@ -24,6 +24,11 @@ export default {
   created() {
       this.getLastUpdated()
   },
+  watch: {
+    path() {
+        this.getLastUpdated()
+    }
+  },
   methods: {
     async getLastUpdated() {
       const octokit = new Octokit()
