@@ -217,7 +217,7 @@ export default {
 
   sitemap: {
     path: '/sitemap.xml',
-    hostname: 'https://siroshun09.github.io',
+    hostname: 'https://okocraft.github.io',
     cacheTime: 1000 * 60 * 15,
     gzip: true,
   }
