@@ -41,7 +41,7 @@ export default {
     if (this.title != null) {
         this.pageTitle = this.title
     } else {
-        this.pageTitle = markdown.title != null ? markdown.title : this.$router.path.replace('-', ' ')
+        this.pageTitle = markdown.title != null ? markdown.title : this.$route.params.page.replace('-', ' ')
     }
   }
 }
