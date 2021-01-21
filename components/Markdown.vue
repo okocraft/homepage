@@ -49,6 +49,15 @@ export default {
         this.pageTitle = this.content.title != null ? this.content.title : this.$route.params.page.replace('-', ' ')
       }
     }
+  },
+    watch: {
+    $route(to) {
+       window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+      this.getContent();
+    },
   }
 }
 </script>
