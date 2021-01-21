@@ -10,6 +10,30 @@
 
       <ul :class="{ active: menu, 'top-level': true }">
         <li>
+          <NuxtLink to="/rule">
+            <font-awesome icon="book" fixed-width />
+            利用規約・条項
+          </NuxtLink>
+          <ul :class="{ active: open_rule, 'top-level': true}">
+            <li>
+              <NuxtLink to="/rule/terms-of-service">
+                利用規約
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/rule/penalty-clause">
+                処罰条項
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/rule/building-clause">
+                建築物条項
+              </NuxtLink>
+            </li>
+          </ul>
+        </li>
+
+        <li>
           <NuxtLink to="/wiki">
             <font-awesome icon="book" fixed-width />
             Wiki
@@ -48,13 +72,13 @@
     data() {
       return {
         menu: false,
-        open_programming: false,
+        open_rule: false,
       };
     },
     watch: {
       $route() {
         this.menu = false;
-        this.open_programming = false;
+        this.open_rule = false;
       },
     },
   } 

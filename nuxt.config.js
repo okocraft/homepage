@@ -181,6 +181,23 @@ export default {
     fallback: true
   },
 
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: 'rules-top',
+        path: '/rule',
+        component: resolve(__dirname, 'pages/Rules.vue'),
+        children: [
+          {
+            path: ':page',
+            name: 'rule',
+            component: resolve(__dirname, 'pages/Rules.vue'),
+          },
+        ],
+      })
+    }
+  },
+
   markdownit: {
     preset: 'default',
     linkify: true,
