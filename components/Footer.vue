@@ -62,6 +62,7 @@
 <style lang="scss">
 #footer {
   padding: .3em 1em;
+  padding-bottom: 1.5em;
   position: relative;
   font-size: 1.2em;
   flex: 0 0 auto;
