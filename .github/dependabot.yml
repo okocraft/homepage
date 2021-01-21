@@ -6,11 +6,17 @@ updates:
   schedule:
     interval: daily
     time: '00:00'
-  open-pull-requests-limit: 10
-  reviewers:
-    - siroshun09
-  assignees:
-    - siroshun09
+  commit-message:
+    prefix: fix
+    prefix-development: chore
+    include: scope
+
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+  schedule:
+    interval: daily
+    time: '00:00'
   commit-message:
     prefix: fix
     prefix-development: chore
