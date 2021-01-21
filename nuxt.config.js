@@ -133,6 +133,10 @@ export default {
         rel: 'preconnect',
         href: 'https://fonts.gstatic.com/'
       },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap&subset=japanese"
+      }
     ]
   },
 
