@@ -220,5 +220,10 @@ export default {
     hostname: 'https://okocraft.github.io',
     cacheTime: 1000 * 60 * 15,
     gzip: true,
+    routes: async () => {
+      const { $content } = require('@nuxt/content')
+      var posts = await $content('rule').only(['path']).fetch()
+      return posts.map((p) => p.path)
+    }
   }
 }
