@@ -34,13 +34,6 @@
         </li>
 
         <li>
-          <NuxtLink to="/wiki">
-            <font-awesome icon="book" fixed-width />
-            Wiki
-          </NuxtLink>
-        </li>
-
-        <li>
           <a href="https://twitter.com/okocraft" target="_blank" rel="noopener">
             <font-awesome :icon="['fab', 'twitter']" fixed-width />
             Twitter
@@ -48,10 +41,10 @@
         </li>
 
         <li>
-          <a href="https://github.com/okocraft" target="_blank" rel="noopener">
-            <font-awesome :icon="['fab', 'github']" fixed-width />
-            GitHub
-          </a>
+          <NuxtLink to="/discord">
+            <font-awesome :icon="['fab', 'discord']" fixed-width />
+            Discord
+          </NuxtLink>
         </li>
 
       </ul>
