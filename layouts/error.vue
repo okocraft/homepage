@@ -21,11 +21,19 @@
 <script>
 export default {
   name: 'NotFound',
+  data() {
+    return {
+      title: null
+    }
+  },
   head(){
-    return {title: 'Not Found'}
+    return {title: this.title}
   },
   props: ['error'],
-  layout: 'error'
+  layout: 'error',
+  created() {
+    this.title = this.error.statusCode === 404 ? "Not Found" : "Error Occurred"
+  }
 };
 </script>
 
