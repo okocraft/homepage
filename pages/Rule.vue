@@ -1,6 +1,8 @@
 <template>
   <div id='rule'>
     <div v-if='this.$route.params.page != null' class='rule'>
+      <LastUpdatedDate :path='"/content/rule/" + this.$route.params.page + ".md"' />
+      <ViewOnGitHub :path='"/content/rule/" + this.$route.params.page + ".md"' />
       <Markdown :path='"rule/" + this.$route.params.page' />
     </div>
     <div v-else class='rule-list'>
