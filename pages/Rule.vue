@@ -1,8 +1,8 @@
 <template>
   <div id='rule'>
     <div v-if='this.$route.params.page != null' class='rule'>
-      <LastUpdatedDate :path='"/content/rule/" + this.$route.params.page + ".md"' />
-      <ViewOnGitHub :path='"/content/rule/" + this.$route.params.page + ".md"' />
+      <LastUpdatedDate :path='this.githubPath' />
+      <ViewOnGitHub :path='this.githubPath' />
       <Markdown :path='"rule/" + this.$route.params.page' />
     </div>
     <div v-else class='rule-list'>
@@ -35,8 +35,22 @@ import { Component, Vue } from "nuxt-property-decorator";
 
 @Component({})
 export default class extends Vue {
+  githubPath: string = ""
+
   private head() {
     return { title: "利用規約・条項"};
+  }
+
+  created() {
+    this.getGitHubPath()
+  }
+
+  updated() {
+    this.getGitHubPath()
+  }
+
+  getGitHubPath() {
+    this.githubPath = "/content/rule/" + this.$route.params.page + ".md"
   }
 }
 </script>
