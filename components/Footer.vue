@@ -1,5 +1,44 @@
 <template>
   <div id='footer'>
+    <div class='footer-nav'>
+      <div class='footer-list'>
+        <span>
+        <NuxtLink to="/rule">
+          利用規約・条項
+        </NuxtLink>
+        </span>
+
+        <ul>
+          <li>
+            <NuxtLink to="/rule/terms-of-service">利用規約</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/rule/penalty-clause">処罰条項</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/rule/building-clause">建築物条項</NuxtLink>
+          </li>
+        </ul>
+      </div>
+      <div class='footer-list'>
+          <span>その他</span>
+
+        <ul>
+        <li>
+          <a href="https://twitter.com/okocraft" target="_blank" rel="noopener">
+            Twitter
+          </a>
+        </li>
+
+        <li>
+          <NuxtLink to="/discord">
+            Discord
+          </NuxtLink>
+        </li>
+        </ul>
+      </div>
+    </div>
+
     <small>
       Copyright © 2020-2021 <a href="https://github.com/okocraft">Okocraft</a>
     </small>
@@ -28,8 +67,64 @@
   flex: 0 0 auto;
   height: auto;
   width: 100%;
-  border-top: 0.1em solid #999999;
+  border-top: 0.1em solid gray;
   text-align: center;
+  background: $footer-background;
+
+  .footer-nav {
+    margin-top: 2.0em;
+    margin-bottom: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 90%;
+
+    @include breakpoint($xs) {
+      width: 90%;
+      display: block;
+    }
+
+    .footer-list {
+      font-size: 1.0em;
+      margin-left: auto;
+      margin-right: auto;
+
+      >span {
+        border-bottom: $footer-list-title-border solid;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        font-size: 1.0em;
+
+        >a {
+          color: $link-color;
+          text-decoration: none;
+        }
+      }
+
+      >ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin: 0.5em;
+
+        >li {
+          >a {
+            font-size: 1.0em;
+            color: $footer-list-item-color;
+            text-decoration: none;
+            transition: all .2s;
+            align-items: center;
+            text-align: left;
+
+            &:hover {
+              color: $footer-list-item-hover;
+            }
+          }
+        }
+      }
+    }
+  }
 
   >small {
     >a {
