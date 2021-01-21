@@ -3,7 +3,7 @@
     <template v-if="content">
       <transition name="fade" mode="out-in">
         <article>
-          <component :is="content" />
+           <nuxt-content :document='content' />
         </article>
       </transition>
     </template>
@@ -21,8 +21,8 @@ export default {
       required: true,
     },
     title: {
-        type: String,
-        required: false
+      type: String,
+      required: false
     }
   },
   data() {
@@ -31,24 +31,30 @@ export default {
       content: null
     }
   },
-  head(){
-    return {title: this.pageTitle}
+  head() {
+    return {
+      title: this.pageTitle
+    }
   },
   created() {
-    const markdown = require(`@${this.path}`)
-    this.content = markdown.vue.component
+    this.getContent()
+  },
+  methods: {
+    async getContent() {
+      this.content = await this.$content(this.path).fetch()
 
-    if (this.title != null) {
+      if (this.title != null) {
         this.pageTitle = this.title
-    } else {
-        this.pageTitle = markdown.title != null ? markdown.title : this.$route.params.page.replace('-', ' ')
+      } else {
+        this.pageTitle = this.content.title != null ? this.content.title : this.$route.params.page.replace('-', ' ')
+      }
     }
   }
 }
 </script>
 
 <style lang="scss">
-.markdown-body {
+.nuxt-content {
   a {
     color: $link-color;
     text-decoration: none;
