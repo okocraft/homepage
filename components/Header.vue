@@ -2,18 +2,18 @@
   <div>
     <nav id="nav">
       <div>
-        <router-link to="/" class="logo">
+        <NuxtLink to="/" class="logo">
           <img alt="logo" src="@/assets/logo.png">
           <span>Okocraft</span>
-        </router-link>
+        </NuxtLink>
       </div>
 
       <ul :class="{ active: menu, 'top-level': true }">
         <li>
-          <router-link to="/wiki">
+          <NuxtLink to="/wiki">
             <font-awesome icon="book" fixed-width />
             Wiki
-          </router-link>
+          </NuxtLink>
         </li>
 
         <li>
