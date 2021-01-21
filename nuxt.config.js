@@ -186,12 +186,12 @@ export default {
       routes.push({
         name: 'rules-top',
         path: '/rule',
-        component: resolve(__dirname, 'pages/Rules.vue'),
+        component: resolve(__dirname, 'pages/Rule.vue'),
         children: [
           {
             path: ':page',
             name: 'rule',
-            component: resolve(__dirname, 'pages/Rules.vue'),
+            component: resolve(__dirname, 'pages/Rule.vue'),
           },
         ],
       })
