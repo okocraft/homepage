@@ -1,8 +1,8 @@
 <template>
   <div class=lastUpdated>
-    <span>
-        最終更新: {{ date }}
-    </span>
+    <small>
+      最終更新: {{ date }}
+    </small>
   </div>
 </template>
 
@@ -56,7 +56,7 @@ export default {
 
 <style lang="scss" scoped>
 .lastUpdated {
-    font-size: 1.0rem;
+    @extend %normal-text;
     text-align: right;
     color: $last-updated-date;
 }

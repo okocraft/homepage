@@ -4,6 +4,7 @@
       <font-awesome icon="exclamation-circle" />
       {{ this.title }}!
     </h1>
+
     <div v-if="code === 404" class="error">
       <p>指定されたリンクのページ "<code>{{ this.$route.path }}</code>" は見つかりませんでした。</p>
       <p>The page "<code>{{ this.$route.path }}</code>" couldn't be found.</p>
@@ -14,9 +15,9 @@
       <br />
       <p>Message: {{ this.message }}</p>
     </div>
-    <div>
+
      <p><NuxtLink to="/">トップページに戻る</NuxtLink> | <NuxtLink to="/">Return to top</NuxtLink></p>
-    </div>
+
   </section>
 </template>
 
@@ -40,6 +41,8 @@ export default {
 
 <style lang="scss" scoped>
 .not-found-section {
+  @extend %normal-text-link;
+
   flex-direction: column;
   align-items: center;
   padding: 4rem;
@@ -49,7 +52,7 @@ export default {
     font-size: 3.0em;
 
     >svg {
-      color: $not-found-red;
+      color: $error-color;
       z-index: 1;
       opacity: .5;
       margin-right: 0.5em;
@@ -61,16 +64,10 @@ export default {
   }
 
   .error {
-    color: $not-found-red;
-
+    @extend %normal-text;
     >p {
-      font-size: 1.3rem;
+      color: $error-color;
     }
-  }
-
-  a {
-    text-decoration: none;
-    color: $link-color;
   }
 }
 </style>

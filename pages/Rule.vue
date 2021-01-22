@@ -12,18 +12,18 @@
       <p>Minecraft サーバーや Discord に参加した時点で同意したものとみなします。</p>
 
       <h2>
-        <NuxtLink to='/rule/terms-of-service' class=link>利用規約</NuxtLink>
+        <NuxtLink to='/rule/terms-of-service'>利用規約</NuxtLink>
       </h2>
 
       <p>おこ鯖。が提供するものを利用する上で同意する必要のある規約です。</p>
 
       <h2>
-        <NuxtLink to='/rule/penalty-clause' class=link>処罰条項</NuxtLink>
+        <NuxtLink to='/rule/penalty-clause'>処罰条項</NuxtLink>
       </h2>
       <p>Minecraft サーバーや Discord でのルールです。</p>
 
       <h2>
-        <NuxtLink to='/rule/building-clause' class=link>建築物条項</NuxtLink>
+        <NuxtLink to='/rule/building-clause'>建築物条項</NuxtLink>
       </h2>
       <p>Minecraft サーバー内での建築に関する規定です。</p>
     </div>
@@ -57,6 +57,7 @@ export default class extends Vue {
 
 <style scoped lang="scss">
 #rule {
+  @extend %title-text;
   width: 75%;
   margin-left: auto;
   margin-right: auto;
@@ -67,12 +68,8 @@ export default class extends Vue {
   }
 
   .rule-list {
-    >h1 h2 h3 {
-      >a {
-        color: $link-color;
-        text-decoration: none;
-      }
-    }
+    @extend %title-text-link;
+    @extend %normal-text;
   }
 }
 </style>
