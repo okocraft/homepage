@@ -53,7 +53,7 @@ code, pre {
 }
 
 #app {
-  color: $app-color;
+  color: $text-color;
   background-color: $app-background;
   line-height: 1.5;
   width: 100%;
@@ -64,10 +64,5 @@ code, pre {
   font-family: 'Noto Sans JP', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-#main-contents {
-  margin-bottom: 3em;
-  width: 100%;
 }
 </style>

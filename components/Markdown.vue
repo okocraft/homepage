@@ -7,8 +7,8 @@
         </article>
       </transition>
     </template>
-    <template v-else>
-      <NotFound />
+    <template v-else-if="failure">
+      <Error code=404 message="Not Found" />
     </template>
   </div>
 </template>
@@ -28,7 +28,8 @@ export default {
   data() {
     return {
       pageTitle: null,
-      content: null
+      content: null,
+      failure: false
     }
   },
   head() {
@@ -50,117 +51,25 @@ export default {
       }
     }
   },
-    watch: {
+  watch: {
     $route(to) {
-       window.scrollTo({
+      window.scrollTo({
         top: 0,
         behavior: 'smooth'
       })
       this.getContent();
     },
+    content() {
+      this.failure = this.content == null;
+    }
   }
 }
 </script>
 
 <style lang="scss">
 .nuxt-content {
-  a {
-    color: $link-color;
-    text-decoration: none;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
-    cursor: text;
-  }
-
-  h1:hover a.anchor,
-  h2:hover a.anchor,
-  h3:hover a.anchor,
-  h4:hover a.anchor,
-  h5:hover a.anchor,
-  h6:hover a.anchor {
-    text-decoration: none;
-  }
-
-  h1 tt,
-  h1 code {
-    font-size: inherit;
-  }
-
-  h2 tt,
-  h2 code {
-    font-size: inherit;
-  }
-
-  h3 tt,
-  h3 code {
-    font-size: inherit;
-  }
-
-  h4 tt,
-  h4 code {
-    font-size: inherit;
-  }
-
-  h5 tt,
-  h5 code {
-    font-size: inherit;
-  }
-
-  h6 tt,
-  h6 code {
-    font-size: inherit;
-  }
-
-  h1 {
-    font-size: 2.0rem;
-    line-height: 1.75;
-    border-bottom: 1px solid #eee;
-  }
-
-  h2 {
-    font-size: 1.75rem;
-    line-height: 1.75;
-    border-bottom: 1px solid #eee;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-    line-height: 1.3;
-  }
-
-  h4 {
-    font-size: 1.3rem;
-  }
-
-  h5 {
-    font-size: 1.2rem;
-  }
-
-  h6 {
-    font-size: 1.2rem;
-    color: #777;
-  }
-
-  p,
-  blockquote,
-  ul,
-  ol,
-  dl,
-  table {
-    font-size: 1.1rem;
-    margin: 0.8em 0;
-  }
+  @extend %title-text;
+  @extend %normal-text-link;
 
   li>ol,
   li>ul {

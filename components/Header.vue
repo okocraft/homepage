@@ -217,7 +217,6 @@
         &:hover {
           background-color: $header-background-hover;
         }
-
       }
 
       >ul {
@@ -251,14 +250,14 @@
         @include breakpoint($sm) {
           display: none;
           position: absolute;
+          flex-direction: column;
           top: 100%;
           left: 50%;
           transform: translateX(-50%);
-          flex-direction: column;
           min-width: 100%;
-          background: $header-background;
           z-index: 100;
           box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+          background: $header-background;
 
           li {
             &:hover {

@@ -1,11 +1,11 @@
 <template>
   <div id='footer'>
-    <div class='footer-nav'>
+    <div id='footer-nav'>
       <div class='footer-list'>
         <span>
-        <NuxtLink to="/rule">
-          利用規約・条項
-        </NuxtLink>
+          <NuxtLink to="/rule">
+            利用規約・条項
+          </NuxtLink>
         </span>
 
         <ul>
@@ -21,41 +21,43 @@
         </ul>
       </div>
       <div class='footer-list'>
-          <span>その他</span>
+        <span>その他</span>
 
         <ul>
-        <li>
-          <a href="https://twitter.com/okocraft" target="_blank" rel="noopener">
-            Twitter
-          </a>
-        </li>
+          <li>
+            <a href="https://twitter.com/okocraft" target="_blank" rel="noopener">
+              Twitter
+            </a>
+          </li>
 
-        <li>
-          <NuxtLink to="/discord">
-            Discord
-          </NuxtLink>
-        </li>
+          <li>
+            <NuxtLink to="/discord">
+              Discord
+            </NuxtLink>
+          </li>
         </ul>
       </div>
     </div>
 
-    <small>
-      Copyright © 2020-2021 <a href="https://github.com/okocraft">Okocraft</a>
-    </small>
-    <br />
-    <small xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" class="license-text">
-      <NuxtLink to="/">Okocraft</NuxtLink> is licensed
-      under
-      <a rel="license" href="https://github.com/okocraft/Okocraft-Web/blob/master/LICENSE">
-        CC BY-SA 4.0
-        <img alt="cc" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
-          src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" />
-        <img alt="by" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
-          src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" />
-        <img alt="sa" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
-          src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" />
-      </a>
-    </small>
+    <div id="copyright-and-license">
+      <small>
+        Copyright © 2020-2021 <a href="https://github.com/okocraft">Okocraft</a>
+      </small>
+      <br />
+      <small xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#">
+        <NuxtLink to="/">Okocraft</NuxtLink> is licensed
+        under
+        <a rel="license" href="https://github.com/okocraft/Okocraft-Web/blob/master/LICENSE">
+          CC BY-SA 4.0
+          <img alt="cc" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" />
+          <img alt="by" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" />
+          <img alt="sa" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" />
+        </a>
+      </small>
+    </div>
   </div>
 </template>
 
@@ -63,6 +65,7 @@
 #footer {
   padding: .3em 1em;
   padding-bottom: 1.5em;
+  margin-top: 5rem;
   position: relative;
   font-size: 1.2em;
   flex: 0 0 auto;
@@ -72,7 +75,7 @@
   text-align: center;
   background: $footer-background;
 
-  .footer-nav {
+  #footer-nav {
     margin-top: 2.0em;
     margin-bottom: 1.5em;
     margin-left: auto;
@@ -86,20 +89,16 @@
     }
 
     .footer-list {
-      font-size: 1.0em;
+      @extend %normal-text;
       margin-left: auto;
       margin-right: auto;
 
       >span {
+        @extend %link-style;
         border-bottom: $footer-list-title-border solid;
         padding-left: 0.5em;
         padding-right: 0.5em;
-        font-size: 1.0em;
-
-        >a {
-          color: $link-color;
-          text-decoration: none;
-        }
+        font-size: 1.3rem;
       }
 
       >ul {
@@ -111,12 +110,10 @@
 
         >li {
           >a {
-            font-size: 1.0em;
             color: $footer-list-item-color;
-            text-decoration: none;
             transition: all .2s;
             align-items: center;
-            text-align: left;
+            text-decoration: none;
 
             &:hover {
               color: $footer-list-item-hover;
@@ -127,10 +124,10 @@
     }
   }
 
-  >small {
-    >a {
-      color: $link-color;
-      text-decoration: none;
+  #copyright-and-license {
+    >small {
+      @extend %link-style;
+      font-size: 0.95rem;
     }
   }
 }
