@@ -20,7 +20,7 @@
     "@octokit/rest": "^18.3.5",
     "core-js": "^3.8.2",
     "dayjs": "^1.10.4",
-    "markdown-it-anchor": "^7.0.0",
+    "markdown-it-anchor": "^7.1.0",
     "markdown-it-emoji": "^2.0.0",
     "markdown-it-highlightjs": "^3.4.0",
     "nuxt": "^2.14.12",
