@@ -47,7 +47,7 @@
       <small xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#">
         <NuxtLink to="/">Okocraft</NuxtLink> is licensed
         under
-        <a rel="license" href="https://github.com/okocraft/Okocraft-Web/blob/master/LICENSE">
+        <a rel="license" href="https://github.com/okocraft/homepage/blob/master/LICENSE">
           CC BY-SA 4.0
           <img alt="cc" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
             src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" />
