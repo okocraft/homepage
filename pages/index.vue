@@ -9,6 +9,8 @@
         <h1>Okocraft</h1>
 
         <p>A Minecraft Server.</p>
+
+        <p><strong>このサイトは作成中です。</strong></p>
       </div>
     </div>
   </div>
