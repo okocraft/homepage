@@ -18,7 +18,7 @@
     "@nuxtjs/markdownit": "^1.2.10",
     "@nuxtjs/sitemap": "^2.4.0",
     "@octokit/rest": "^18.3.5",
-    "core-js": "^3.8.2",
+    "core-js": "^3.9.1",
     "dayjs": "^1.10.4",
     "markdown-it-anchor": "^7.1.0",
     "markdown-it-emoji": "^2.0.0",
