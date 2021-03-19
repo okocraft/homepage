@@ -207,7 +207,7 @@ export default {
     linkify: true,
     breaks: true,
     use: [
-      [
+    /*  [
         require('markdown-it-anchor'), {
           permalink: true,
           permalinkSymbol: '🔗',
@@ -215,7 +215,7 @@ export default {
         }
       ],
       require('markdown-it-emoji'),
-      require('markdown-it-highlightjs')
+      require('markdown-it-highlightjs') */
     ]
   },
 
