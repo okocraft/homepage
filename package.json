@@ -27,7 +27,7 @@
     "nuxt-property-decorator": "^2.9.1"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.14.12",
+    "@nuxt/types": "^2.15.5",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "node-sass": "^5.0.0",
